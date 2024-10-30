@@ -1,0 +1,263 @@
+.App {
+  background-color:#e5ddd5;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.loginRegistration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 1000;
+}
+
+.modalTitle {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.modalInput {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.modalInput:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.submitButton {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+.toggleButton,
+.closeButton {
+  margin-top: 10px;
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.toggleButton:hover,
+.closeButton:hover {
+  color: #0056b3;
+}
+
+
+.header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  padding: 10px 0;
+  position: absolute;
+  justify-content: center;
+  top: 0;
+}
+
+.header button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header button:hover {
+  background-color: #0056b3;
+}
+
+.chatWindow {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 88%;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #e5ddd5;
+  overflow-y: auto;
+  align-items: flex-start;
+}
+
+.msg {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  padding: 8px 12px;
+  max-width: 60%;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  color: #333;
+  font-size: 14px;
+  position: relative;
+}
+
+.ownMessage {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+}
+
+.sendOwnMessage {
+  align-self: flex-end;
+  background-color: #eaf0e6;
+}
+
+.msgContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.msgUser {
+  font-weight: bold;
+  margin: 0;
+  color: #0084ff;
+  font-size: 12px;
+}
+
+.msgText {
+  margin: 5px 0 0 0;
+  color: #333;
+}
+
+.msgTime {
+  font-size: 10px;
+  color: #999;
+  align-self: flex-end;
+  margin-left: 10px;
+}
+
+.msgImage {
+  max-width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  margin: 5px 0;
+}
+
+.msgVoice {
+  width: 100%;
+  margin: 5px 0;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.sendMessageContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #f7f7f7;
+}
+
+.messageInput {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.sendButton {
+  margin-left: 10px;
+  padding: 8px 12px;
+  background-color: #0084ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background-color: #0073e6;
+  }
+
+  &:active {
+    background-color: #005bb5;
+  }
+}
+
+.fileUploadButton {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #4a90e2;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #357ab8;
+  }
+}
+
+.voiceRecordButton {
+  padding: 10px 15px;
+  background-color: #e94e77;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+
+  &:hover {
+    background-color: #c74061;
+  }
+}
+
+
+.notification {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 1000;
+}
